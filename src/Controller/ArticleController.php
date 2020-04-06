@@ -63,13 +63,14 @@ class ArticleController extends AbstractbaseController
           );
       }
 
-        /**
-       * @Route("/article/category", name="article_category", methods={"GET"})
+
+              /**
+       * @Route("/article/category/{id}", name="article_category", methods={"GET"})
        */
-      public function listByCategory(ArticleRepository $articleRepository, SerializerInterface $serializer)
+      public function listByCategory(ArticleRepository $articleRepository, SerializerInterface $serializer, $id)
   
       {
-          $articles = $articleRepository->findBy(['category' => 1]);
+          $articles = $articleRepository->findBy(['categoryId' => $id]);
   
           $jsonarticles = $serializer->serialize($articles, 'json');
   

@@ -24,7 +24,7 @@ class AppFixtures extends Fixture
 {       $article = new Article();
         $article->setTitle($faker->word())
         ->setContent($faker->text($maxNbChars = 200))
-        ->setStatus($faker->numberBetween($min = 0, $max = 2))
+        ->setStatus($faker->numberBetween($min = 0, $max = 5))
         ->setTrending($faker->boolean($chanceOfGettingTrue = 70))
         ->setPublished($faker->dateTimeBetween($startDate = '-30 years', $endDate = 'now', $timezone = 'Europe/Paris'))
         ->setCreated($faker->dateTimeBetween($startDate = '-30 years', $endDate = 'now', $timezone = 'Europe/Paris'))
