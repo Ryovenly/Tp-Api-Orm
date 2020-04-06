@@ -13,19 +13,19 @@ class Article
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
-     * ['groups' => 'article:create']
+     * @Groups("article:create")
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * ['groups' => 'article:create']
+     * @Groups("article:create")
      */
     private $title;
 
     /**
      * @ORM\Column(type="text")
-     * ['groups' => 'article:create']
+     * @Groups("article:create")
      */
     private $content;
 
@@ -36,13 +36,13 @@ class Article
 
     /**
      * @ORM\Column(type="boolean")
-     * ['groups' => 'article:create']
+     * @Groups("article:create")
      */
     private $trending;
 
     /**
      * @ORM\Column(type="date", nullable=true)
-     * ['groups' => 'article:create']
+     * @Groups("article:create")
      */
     private $published;
 
@@ -53,7 +53,7 @@ class Article
 
     /**
      * @ORM\Column(type="integer")
-     * ['groups' => 'article:create']
+     * @Groups("article:create")
      */
     private $categoryId;
 

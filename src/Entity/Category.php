@@ -13,7 +13,7 @@ class Category
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
-     * ['groups' => 'category:create']
+     * @Groups("category:create")
      */
     private $id;
 
@@ -24,7 +24,7 @@ class Category
 
     /**
      * @ORM\Column(type="date")
-     * ['groups' => 'category:create']
+     * @Groups("category:create")
      */
     private $created;
 
